@@ -10,6 +10,7 @@ def pick_teams(exclude_team = None):
 
     # print available teams for user to choose between.
     print("\nAvailable Teams:\n")
+    
     for team in teams:
         print(team)
     print()
