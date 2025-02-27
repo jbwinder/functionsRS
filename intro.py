@@ -15,6 +15,7 @@ def intro(name):
 
     if userDesc == 1:
         pass #run menu function
+        # pick_teams.py()
 
     else: 
         print (f"Goodbye!") 
