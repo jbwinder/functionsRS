@@ -14,7 +14,7 @@ def intro(name):
     userDesc = int(input("Enter your choice: "))
 
     if userDesc == 1:
-        # pick_teams.py()
+        pick_teams.py()
 
     else: 
         print (f"Goodbye!") 
