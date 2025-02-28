@@ -22,6 +22,11 @@ def intro(name):
     else: 
         print (f"Goodbye!") 
         quit()
+        # pick_teams.py()
+    else: 
+        print (f"Goodbye!") 
+        quit()
+
 
     # John Winder
 # Takes list of teams and checks for home team. After that display names of available teams and prompt user
