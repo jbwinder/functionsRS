@@ -14,11 +14,12 @@ def intro(name):
     userDesc = int(input("Enter your choice: "))
 
     if userDesc == 1:
-        # pick_teams.py()
+        pick_teams.py()
 
     else: 
         print (f"Goodbye!") 
         quit()
+
 
     # John Winder
 # Takes list of teams and checks for home team. After that display names of available teams and prompt user
@@ -44,3 +45,4 @@ def pick_teams(exclude_team = None):
             return choice
         else:
             print("\n Name not in list. Make sure to write name correctly\n")
+
