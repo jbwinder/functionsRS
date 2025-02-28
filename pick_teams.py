@@ -1,6 +1,7 @@
-# John Winder
+# John Winder, Nathan Blatter
 # Takes list of teams and checks for home team. After that display names of available teams and prompt user
 # to select a team return their choice
+
 
 def pick_teams(exclude_team = None):
     # set list of teams and then see if there is a team that needs to be removed from the list.
@@ -23,4 +24,16 @@ def pick_teams(exclude_team = None):
             return choice
         else:
             print("\n Name not in list. Make sure to write name correctly\n")
+
+
+
+#2. Display of menu and return choice. 
+# Store in variable and use this value to determine which function to call next.
+def callmenu () :
+    print("\n Menu")
+    print("Option 1: Start a new season")
+    print("Option 2: Exit")
+    Choice = input("Please input your choice:  1 or 2 ")
+    return Choice
+
 
