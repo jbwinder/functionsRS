@@ -25,7 +25,7 @@ def pick_teams(exclude_team = None):
         else:
             print("\n Name not in list. Make sure to write name correctly\n")
 
-
+#nathan blatter
 
 #2. Display of menu and return choice. 
 # Store in variable and use this value to determine which function to call next.
