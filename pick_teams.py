@@ -1,4 +1,4 @@
-# John Winder, Nathan Blatter, Rachel 
+# John Winder, Nathan Blatter, Rachel McMullin, Taylor Wall, Jakob Kahler
 # Takes list of teams and checks for home team. After that display names of available teams and prompt user
 # to select a team return their choice
 
@@ -36,8 +36,9 @@ def callmenu () :
     Choice = input("Please input your choice:  1 or 2 ")
     return Choice
 
+
 '''
-Play the game receiving both team names. Generate random scores without ties. Return W or L.
+Rachel McMullin- Part 4
 Input home & away teams.
 Output return dictionary
 '''
@@ -103,4 +104,3 @@ def intro(name):
     In this game, you will select your team and the teams you will play.
     Scores will be generated and your team's wins and loses will be recorded.")
     return name
-
