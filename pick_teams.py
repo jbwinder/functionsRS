@@ -18,11 +18,12 @@ def callmenu () :
 
 # Part 3- John Winder
 # Create a function that displays a list of teams. Prompt user to pick a team and return their choice.
-def pick_teams(exclude_team = None):
+def pick_teams(played_team = None):
     # set list of teams and then see if there is a team that needs to be removed from the list.
     teams = ["BYU", "Utah", "Utah State","UVU", "SUU", "Utah Tech"]
-    if exclude_team != None:
-        teams.remove(exclude_team)
+    if played_team != None:
+        for team in played_teams:
+            teams.remove(team)
     # print available teams for user to choose between.
     for number in range(0,len(teams)):
         print(f"{number + 1}: {teams[number]}")
@@ -76,17 +77,22 @@ def display_final_record(win_loss_log):
 # main function
 # set list of W's and L's
 win_loss_log = []
+played_teams = []
 name = intro()
 print("Pick a home team:")
 home_team = pick_teams()
+played_teams.append(home_team)
 # Set Loop to only break if they ask to leave loop
 # pick a home team and away team
 loop = True
 while loop == True:
     choice = callmenu()
-    if choice == 1:
+    if len(played_teams) == 6:
+        loop = False
+    elif choice == 1:
         print("\nPick an away team:")
         away_team = pick_teams(home_team)
+        played_teams.append(away_team)
 # append the W or L to the list of win_loss_log
         results = determine_winner(home_team, away_team)
         win_loss_log.append(results)
