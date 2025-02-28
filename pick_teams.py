@@ -24,22 +24,16 @@ def pick_teams(exclude_team = None):
     if exclude_team != None:
         teams.remove(exclude_team)
     # print available teams for user to choose between.
-    for team in teams:
-        print(team)
-    print()
-
-    print("Available Teams:")
-    
-    for team in teams:
-        print(team)
+    for number in range(0,len(teams)):
+        print(f"{number + 1}: {teams[number]}")
     # ask user to type the name of a team as seen above. If name does not match team in list then make them do ti again.
     # When typed name correctly return the name.
     while True:
-        choice = input("Write name of team you are choosing: ")
-        if choice in teams:
-            return choice
+        choice = int(input("Select team by choosing it's number: "))
+        if 0 < choice <= len(teams):
+            return teams[choice - 1]
         else:
-            print("\n Name not in list. Make sure to write name correctly\n")
+            print("\n Number not in list. Make sure to input number correctly\n")
 
 
 # Part 4- Rachel McMullin
