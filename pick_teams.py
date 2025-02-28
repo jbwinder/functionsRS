@@ -1,40 +1,37 @@
-# Taylor Wall
-# Display an introduction to the game explaining rules and prompt for their name and display that in the welcome message
-# Return the name to the main program and store it in variable so it can be used throughout the program.
+# Part 1- Taylor Wall
+# Create a function that explains the game and returns the users name.
 def intro():
     name = input("Please enter your name: ")
-
     print (f"\nHello {name}, welcome to this soccer season!")
     print("In this game, you will select your team and the teams you will play.")
-    print("Scores will be generated and your team's wins and loses will be recorded.")
+    print("Scores will be generated and your team's wins and loses will be recorded.\n")
     return name
 
-#nathan blatter
-#2. Display of menu and return choice. 
-# Store in variable and use this value to determine which function to call next.
+# Part 2- Nathan Blatter
+# Create a function that displays a menu and returns choice that determines what function to call next.
 def callmenu () :
     print("\n Menu")
     print("Option 1: Start a new game")
     print("Option 2: Exit")
-    Choice = int(input("Please input your choice:  1 or 2 "))
+    Choice = int(input("Please input your choice (1 or 2): "))
     return Choice
 
-
-# John Winder
-# Takes list of teams and checks for home team. After that display names of available teams and prompt user
-# to select a team return their choice
+# Part 3- John Winder
+# Create a function that displays a list of teams. Prompt user to pick a team and return their choice.
 def pick_teams(exclude_team = None):
     # set list of teams and then see if there is a team that needs to be removed from the list.
     teams = ["BYU", "Utah", "Utah State","UVU", "SUU", "Utah Tech"]
     if exclude_team != None:
         teams.remove(exclude_team)
-
     # print available teams for user to choose between.
+    for team in teams:
+        print(team)
+    print()
+
     print("Available Teams:")
     
     for team in teams:
         print(team)
-
     # ask user to type the name of a team as seen above. If name does not match team in list then make them do ti again.
     # When typed name correctly return the name.
     while True:
@@ -45,10 +42,8 @@ def pick_teams(exclude_team = None):
             print("\n Name not in list. Make sure to write name correctly\n")
 
 
-# Rachel McMullin- Part 4
-# Input home & away teams.
-# Output return dictionary
-# Create custom function. Input home team and away team name.
+# Part 4- Rachel McMullin
+# Create a custom function. Input home & away teams. Output return win-lose results.
 def determine_winner(home_team, away_team):
     import random
     homeScore = 0
@@ -63,10 +58,8 @@ def determine_winner(home_team, away_team):
     print(f"{home_team}: {homeScore}    {away_team}: {awayScore}")
     return results
 
-
-# Jakob Kahler
-# Part 5 of Functions Are US
-# Display the final record for a team. Receive the home team data and display information.
+# Part 5- Jakob Kahler
+# Create a function that displays the final record for a team.
 def display_final_record(win_loss_log):
 # find how many wins and losses the home team has
     wins= 0
@@ -98,7 +91,7 @@ loop = True
 while loop == True:
     choice = callmenu()
     if choice == 1:
-        print("Pick an away team:")
+        print("\nPick an away team:")
         away_team = pick_teams(home_team)
 # append the W or L to the list of win_loss_log
         results = determine_winner(home_team, away_team)
